@@ -1,40 +1,24 @@
-import { useState } from 'react'
-import logo from './logo.svg'
 import './App.css'
 import Navbar from './components/Navbar'
+import Card from './components/Card'
+import data from './data'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const cards = data.map((item, index) => {
+    return (
+      <Card
+        key={index}
+        item={item}
+      />
+    )
+  })
+  
   return (
     <div className="app">
       <header className="app-header">
         <Navbar />
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
       </header>
+      <div className="cards__container">{cards}</div>
     </div>
   )
 }

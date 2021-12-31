@@ -1,27 +1,13 @@
 
 .app {
-  text-align: center;
-}
-
-.app-header {
-  background-color: #282c34;
+  /* text-align: center; */
   min-height: 100vh;
-  color: white;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
+  .navbar__logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
@@ -44,8 +30,69 @@
 
 .navbar__title {
   font-size: 1rem;
+  color: var(--white);
+  font-weight: 500;
 }
 
 .navbar__logo {
   height: 24px;
+}
+
+.cards__container {
+  padding: 40px;
+}
+
+.card {
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--grey);
+  padding-bottom: 20px;
+  display: flex;
+  max-width: 100%;
+
+}
+
+.card__image {
+  border-radius: 5px;
+  width: 125px;
+  height: 170px;
+  object-fit: cover;
+}
+
+.card__data-container {
+  padding: 20px;
+}
+
+.card__compass-icon {
+  margin-right: 5px;
+  height: 10px;
+}
+
+.card__location-data {
+  margin-bottom: 10px;
+  font-size: .65rem;
+  display: flex;
+  align-items: center;
+}
+
+.card__location {
+  text-transform: uppercase;
+  margin-right: 10px;
+  letter-spacing: 2px;
+}
+
+.card__location-url {
+  color: var(--dark-grey);
+}
+
+.card__title {
+  margin-bottom: 20px;
+}
+
+.card__dates-container {
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.card__description {
+  line-height: 150%;
 }
